@@ -1,4 +1,5 @@
-__version__ = "v0.1.0"
+__name__ == 'llmir'
+__version__ = 'v0.1.0'
 
 from dotenv import load_dotenv
 

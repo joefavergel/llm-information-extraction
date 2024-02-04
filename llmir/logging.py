@@ -1,9 +1,22 @@
+from __future__ import annotations
 import logging
+import os
 import sys
-from logging.handlers import MemoryHandler
+from typing import Optional
+
+from . import __name__
 
 
-class APIFormatter(logging.Formatter):
+level_mapping = {
+    "DEBUG": logging.DEBUG,
+    "INFO": logging.INFO,
+    "WARNING": logging.WARNING,
+    "ERROR": logging.ERROR,
+    "CRITICAL": logging.CRITICAL,
+}
+
+
+class Formatter(logging.Formatter):
     grey = "\x1b[38;21m"
     cyan = "\x1b[36;20m"
     yellow = "\x1b[33;21m"
@@ -30,23 +43,49 @@ class APIFormatter(logging.Formatter):
         return formatter.format(record)
 
 
-# Configuración básica del logger
-def setup_logger():
-    logger = logging.getLogger("iq-server")
-    logger.setLevel(logging.INFO)
+def get_logger(
+    *,
+    type_: str = 'stream',
+    level: int = None,
+    logs_path: str = None,
+    filename: str = None,
+    process_id: str | None = None
+) -> logging.Logger:
+    if type_ == 'file' and logs_path is not None and filename is not None:
+        if not os.path.exists(logs_path):
+            os.makedirs(logs_path, exist_ok=True)
 
-    # Handler to write logs in memory, with flushing to disk
-    memory_handler = MemoryHandler(capacity=10000000, flushLevel=logging.ERROR)
-    memory_handler.setFormatter(APIFormatter())
-    logger.addHandler(memory_handler)
+        logs_output = os.path.join(logs_path, filename)
+        if not os.path.isfile(logs_output):
+            with open(logs_output, "w") as file:
+                file.write("")
+            file.close()
 
-    # Handler for standard output (console)
-    console_handler = logging.StreamHandler(sys.stdout)
-    console_handler.setFormatter(APIFormatter())
-    logger.addHandler(console_handler)
+        logging.basicConfig(
+            filename=os.path.join(logs_path, filename),
+            filemode='w',
+            format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
+            level=logging.INFO,
+            datefmt="%Y-%m-%d %H:%M:%S",
+            force=True,
+            encoding='utf-8'
+        )
+    elif type_ == 'stream':
+        stream_handler = logging.StreamHandler(sys.stdout)
+        stream_handler.setFormatter(Formatter())
+        logging.basicConfig(
+            format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
+            level=logging.DEBUG if level is None else level_mapping.get(level),
+            datefmt="%Y-%m-%d %H:%M:%S",
+            force=True,
+            encoding='utf-8',
+            handlers=[stream_handler]
+        )
+    else:
+        raise Exception("Type of logger not supported or unknown")
 
-    return logger
+    name = __name__ if not process_id else f"{__name__}-{process_id}"
+    return logging.getLogger(name)
 
 
-# Crear y configurar el logger
-logger = setup_logger()
+logger = get_logger(type_='stream')
