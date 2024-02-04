@@ -8,8 +8,6 @@ repos:
       args: [--nbqa-mutate, --py36-plus]
     - id: nbqa-isort
       args: [--nbqa-mutate]
-    - id: nbqa-autoflake
-      args: [--nbqa-mutate]
 
 -   repo: https://github.com/myint/autoflake
     rev: v1.4
