@@ -1,43 +1,33 @@
-<img heigth="8" src="https://i.imgur.com/3mimh4M.png" alt="guane">
+<img heigth="8" src="https://i.imgur.com/PjhxQ1Q.png" alt="llmir">
 
-<h1 align="center">🛠️ Data Science and Machine Learning 🤖</h1>
+<h1 align="center">llmir</h1>
 
-<p align="center">A Data Project Template for Building Robust, Reproducible and Maintainable Predictive Solutions</p>
+<p align="center"><i>A Compilation of Notes of Large Language Models for Information Retrieval</i></p>
 
 <p align="center">
-  <a href="https://www.guane.com.co/">guane enterprises</a> 
-  <br> <br>
+  <b>Joseph F. Vergel-Becerra</b> | <a href="https://joefaver.dev/">joefaver.dev</a>
+  <br><br>
   <a href="#about">About</a> •
-  <a href="#features">Features</a> •
-  <a href="#life-cycle">Life Cycle</a> •
-  <a href="#contribute">Contribute</a> •
-  <a href="#authors">Authors</a> •
-  <a href="#license">License</a>
-  <br> <br>
-  <a target="_blank">
-    <img src="https://github.com/QData/TextAttack/workflows/Github%20PyTest/badge.svg" alt="Github Runner Covergae Status">
-  </a>
-  <a href="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000">
-    <img src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" alt="Version" height="18">
-  </a>
-  <a  href="[https://twitter.com/guaneAI](https://twitter.com/guaneAI)"  target="_blank">
-    <img  alt="Twitter: GuaneAI"  src="https://img.shields.io/twitter/follow/guaneAI.svg?style=social"/>
+  <a href="#features">Features</a>
+  <br><br>
+  <a href="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000">
+    <img src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" alt="Version" height="18">
   </a>
 </p>
-
+<br>
 
 ---
 
 ## About
 
-`ds-ml-project-template` is a Python library for training, testing and reporting of the FTL-Pricing predictive models. This `Python` library is designed to training and generate the machine and deep learning models that predicts base transportation cost of FTL modality in United States & Canada. 
+`llm-information-retrieval` is a Python library for training, testing and reporting of the FTL-Pricing predictive models. This `Python` library is designed to training and generate the machine and deep learning models that predicts base transportation cost of FTL modality in United States & Canada. 
 
 
 ---
 
 ## Features
 
-`ds-ml-project-template` is built on `Python 3.9` with [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/) and [scikit-learn](https://scikit-learn.org/stable/), [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/), [plotly](https://plotly.com/python/)  among others, to preprocess the data, build the machine learning models, and visualize the results. 
+`llm-information-retrieval` is built on `Python 3.11` with [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/) and [scikit-learn](https://scikit-learn.org/stable/), [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/), [plotly](https://plotly.com/python/)  among others, to preprocess the data, build the machine learning models, and visualize the results. 
 
 For development, the library use:
 
@@ -65,12 +55,12 @@ The important thing is that if you think they should be combined and form their 
 
 ## Contribute
 
-First, make sure that before enabling pipenv, you must have `Python 3.9` installed. If it does not correspond to the version you have installed, you can create a conda environment with:
+First, make sure that before enabling pipenv, you must have `Python 3.11` installed. If it does not correspond to the version you have installed, you can create a conda environment with:
 
 ```sh
 # Create and activate python 3.9 virutal environment
-$ conda create -n py39 python=3.9
-$ conda activate py39
+$ conda create -n py311 python=3.11
+$ conda activate py311
 ```
 
 Now, you can managament the project dependencies with `Pipenv`. To create de virtual environment and install all dependencies follow:
@@ -95,19 +85,3 @@ Once the dependencies are installed, we need to notify `Jupyter` of this new `Py
 ```sh
 $ ipython kernel install --user --name KERNEL_NAME
 ```
-
-Finally, before making any changes to the library, be sure to review the [GitFlow](https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow) guide and make any changes outside of the `master` branch.
-
-
----
-
-## Authors
-
-👤 **guane Data Science and Machine Learning (DS&ML) Team**
-
-
----
-
-## License
-
-Copyright 2023 © guane enterprises. All rights reserved.
