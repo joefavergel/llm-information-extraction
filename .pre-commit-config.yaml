@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/nbQA-dev/nbQA
-    rev: 0.9.0
+    rev: 1.7.1
     hooks:
     - id: nbqa-black
       args: [--nbqa-mutate]
@@ -18,7 +18,7 @@ repos:
       args: ['--in-place'] # , '--remove-all-unused-imports', '--remove-unused-variable']
 
 -   repo: https://github.com/psf/black
-    rev: 22.3.0
+    rev: 24.1.1
     hooks:
     - id: black
       name: black
@@ -28,7 +28,7 @@ repos:
       types: [python]
 
 -   repo: https://github.com/PyCQA/isort
-    rev: 5.12.0
+    rev: 5.13.2
     hooks:
     - id: isort
       name: isort
