@@ -2,13 +2,14 @@
 
 <h1 align="center">llmir</h1>
 
-<p align="center"><i>A Compilation of Notes of Large Language Models for Information Retrieval</i></p>
+<p align="center"><i>A Compilation of Notes on the Use of Large Language Models (LLMs) for Information Retrieval</i></p>
 
 <p align="center">
   <b>Joseph F. Vergel-Becerra</b> | <a href="https://joefaver.dev/">joefaver.dev</a>
   <br><br>
   <a href="#about">About</a> •
-  <a href="#features">Features</a>
+  <a href="#features">Features</a> •
+  <a href="#contribute">Contribute</a>
   <br><br>
   <a href="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000">
     <img src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" alt="Version" height="18">
@@ -36,19 +37,6 @@ For development, the library use:
 - Linting with [flake8](http://flake8.pycqa.org/en/latest/)
 - Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
 - Testing with [pytest](https://docs.pytest.org/en/latest/)
-
-
----
-
-## Life Cycle
-
-As a proposal for the data science life cycle, [OSEMN](https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492) is mainly proposed. Standing for Obtain, Scrub, Explore, Model, and iNterpret, OSEMN is a five-phase life cycle.
-
-<img heigth="8" src="https://i.imgur.com/tDP8VUd.png" alt="guane"><br>
-
-Other good option is [Microsoft TDSP: The Team Data Science Process](https://learn.microsoft.com/en-us/azure/architecture/data-science-process/overview) combines many modern agile practices with the life cycle. It has five steps: Business Understanding, Data Acquisition and Understanding, Modeling, Deployment, and Customer Acceptance.
-
-The important thing is that if you think they should be combined and form their own life cycle, feel free to do so.
 
 
 ---
