@@ -46,7 +46,7 @@ class Formatter(logging.Formatter):
 def get_logger(
     *,
     type_: str = 'stream',
-    level: int = None,
+    level: str = None,
     logs_path: str = None,
     filename: str = None,
     process_id: str | None = None

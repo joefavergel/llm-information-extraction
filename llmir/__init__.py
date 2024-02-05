@@ -1,4 +1,4 @@
-__name__ == 'llmir'
+__name__ == 'llmix'
 __version__ = 'v0.1.0'
 
 from dotenv import load_dotenv

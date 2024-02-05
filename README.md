@@ -1,8 +1,9 @@
-<img heigth="8" src="https://i.imgur.com/PjhxQ1Q.png" alt="llmir">
+<img heigth="8" src="https://i.imgur.com/BcT6v4W.pngg" alt="llmix">
 
-<h1 align="center">llmir</h1>
+<h1 align="center">LLMIX</h1>
+<h2 align="center"><i>Large Language Models for Information eXtraction</i></h2>
 
-<p align="center"><i>A Compilation of Notes on the Use of Large Language Models (LLMs) for Information Retrieval</i></p>
+<p align="center">A Compilation of Notes on the Use of Large Language Models (LLMs) for Information Extraction</p>
 
 <p align="center">
   <b>Joseph F. Vergel-Becerra</b> | <a href="https://joefaver.dev/">joefaver.dev</a>
@@ -21,14 +22,14 @@
 
 ## About
 
-`llm-information-retrieval` is a Python library for training, testing and reporting of the FTL-Pricing predictive models. This `Python` library is designed to training and generate the machine and deep learning models that predicts base transportation cost of FTL modality in United States & Canada. 
+`llm-information-extraction` is a Python library for training, testing and reporting of the FTL-Pricing predictive models. This `Python` library is designed to training and generate the machine and deep learning models that predicts base transportation cost of FTL modality in United States & Canada. 
 
 
 ---
 
 ## Features
 
-`llm-information-retrieval` is built on `Python 3.11` with [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/) and [scikit-learn](https://scikit-learn.org/stable/), [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/), [plotly](https://plotly.com/python/)  among others, to preprocess the data, build the machine learning models, and visualize the results. 
+`llm-information-extraction` is built on `Python 3.11` with [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/) and [scikit-learn](https://scikit-learn.org/stable/), [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/), [plotly](https://plotly.com/python/)  among others, to preprocess the data, build the machine learning models, and visualize the results. 
 
 For development, the library use:
 
